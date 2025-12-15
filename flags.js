@@ -1,4 +1,4 @@
-export const flags = [[
+export const flags = [
   { country: 'León_(España)', img: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Escudo_de_Le%C3%B3n_%28ciudad%29.svg' },
   { country: 'Barcelona', img: 'https://upload.wikimedia.org/wikipedia/commons/1/11/Escudo_de_Barcelona.svg' },
   { country: 'Valencia', img: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Escut_de_Val%C3%A8ncia.svg' },
@@ -305,6 +305,7 @@ export const flags = [[
   { country: 'Tarazona', img: 'https://upload.wikimedia.org/wikipedia/commons/e/ea/Escudo_de_Tarazona.svg' },
   { country: 'Sariñena', img: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Escudo_de_Sari%C3%B1ena.svg' },
   { country: 'Orihuela', img: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Escudo_Ayuntamiento_Orihuela.svg' },
+  { country: 'Torrevieja', img: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Escut_de_Torrevella_%282001%29.svg' },
   { country: 'Calpe', img: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Escut_de_Calp.svg' },
   { country: 'Jávea', img: 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Escut_de_X%C3%A0bia.svg' },
   { country: 'Cascais', img: 'https://upload.wikimedia.org/wikipedia/commons/9/95/CSC.png' },
@@ -319,5 +320,5 @@ export const flags = [[
   { country: 'Székesfehérvár', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a6/HUN_Sz%C3%A9kesfeh%C3%A9rv%C3%A1r_C%C3%ADmer.svg' },
   { country: 'Ulán_Udé', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Ulan-Ude_COA_%282005%29.gif' }
 ]
-]
+
 
