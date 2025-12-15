@@ -142,27 +142,24 @@ function shuffle(array) {
 }
 
 function createCards() {
-  const selectedFlags = [];
-  const used = new Set();
+  // Barajar todo el array de 300 banderas
+  const shuffledFlags = shuffle([...flags]);
 
-  while(selectedFlags.length < 8){
-    const randomFlag = flags[Math.floor(Math.random() * flags.length)];
-    if(!used.has(randomFlag.country)){
-      used.add(randomFlag.country);
-      selectedFlags.push(randomFlag);
-    }
-  }
+  // Tomar las primeras 8 banderas sin repetición
+  const selectedFlags = shuffledFlags.slice(0, 8);
 
+  // Duplicar las cartas para hacer pares y barajar
   const doubled = [...selectedFlags, ...selectedFlags];
-  cards = shuffle(doubled.map((flag,index)=>({
-    id:index,
-    country:flag.country,
-    img:flag.img,
-    matched:false
+  cards = shuffle(doubled.map((flag, index) => ({
+    id: index,
+    country: flag.country,
+    img: flag.img,
+    matched: false
   })));
 
+  // Crear elementos del tablero
   gameBoard.innerHTML = '';
-  cards.forEach((card,index)=>{
+  cards.forEach((card, index) => {
     const cardElem = document.createElement('div');
     cardElem.classList.add('card');
     cardElem.dataset.index = index;
@@ -175,6 +172,7 @@ function createCards() {
     gameBoard.appendChild(cardElem);
   });
 
+  // Resetear contadores y UI
   matchedPairs = 0;
   flippedCards = [];
   scoreDisplay.textContent = `Pares encontrados: 0`;
@@ -184,7 +182,7 @@ function createCards() {
 
   resetTimer();
   startTimer();
-  gameBoard.style.pointerEvents='auto';
+  gameBoard.style.pointerEvents = 'auto';
 }
 
 function flipCard(cardElem){
