@@ -130,8 +130,8 @@ let cards = [], flippedCards = [], matchedPairs = 0, totalPairs = 8;
 let timer = 0, timerInterval = null;
 let currentLevel = 1, maxLevels = 10;
 
-// El tiempo base será 200s y reducimos 10s por nivel
-function getLevelTime(level) { return Math.max(30, 200 - (level-1)*10); }
+// El tiempo base será 200s y reducimos 15s por nivel
+function getLevelTime(level) { return Math.max(30, 200 - (level-1)*15); }
 
 function shuffle(array) {
   for(let i=array.length-1;i>0;i--){
